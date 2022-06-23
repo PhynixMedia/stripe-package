@@ -1,0 +1,24 @@
+{
+    "name": "stripe/app",
+    "description": "Stripe Package",
+    "authors": [
+        {
+            "name": "Phynix Media ltd",
+            "email": "david.adebayo@phynixmedia.co.uk"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Stripe\\App\\":"src"
+        }
+    },
+    "extra": {
+        "laravel":{
+            "providers":[
+                "Stripe\\App\\StripeServiceProvider"
+            ]
+        }
+    }
+}
