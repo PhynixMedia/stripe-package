@@ -1,2 +1,9 @@
 # Stripe Payment Package
-> Package wrapper for striple library.
+> Package wrapper for stripe library.
+````angular2html
+A wrapper for stripe laravel.
+
+php artisan vendor:publish 
+or
+php artisan vendor:publish --publish=StripeServiceProvider
+```` 
