@@ -14,9 +14,10 @@ class CreatePaymentsTable extends Migration
     public function up()
     {
         Schema::create('payments', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('order_id');
-            $table->string('total');
+            $table->id();
+            $table->string('order_code');
+            $table->decimal('total', 10,2);
+            $table->integer('status');
             $table->timestamps();
         });
     }
