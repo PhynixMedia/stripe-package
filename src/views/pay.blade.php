@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="stylesheet" href="{{ asset('stripe/css/normalize.css') }}" />
-    <link rel="stylesheet" href="{{ asset('stripe/css/global.css') }}" />
+    <link rel="stylesheet" href="{{ asset('packages/stripe/css/normalize.css') }}" />
+    <link rel="stylesheet" href="{{ asset('packages/stripe/css/global.css') }}" />
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="{{ asset('stripe/js/new_stripe_script.js') }}" defer></script>
+    <script src="{{ asset('packages/stripe/js/new_stripe_script.js') }}" defer></script>
     <title>Document</title>
 </head>
 <body>
