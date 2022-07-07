@@ -85,6 +85,4 @@ class PaymentController extends Controller
         return true;
     }
 
-
-
 }
