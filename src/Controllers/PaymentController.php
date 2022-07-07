@@ -37,10 +37,10 @@ class PaymentController extends Controller
         if($redirect_status == "succeeded"){
 
             session()->put(Stripe\App\StripeConstants::PAYMENT_STATUS, $redirect_status);
-            return redirect()->to(route('pay.confirmation', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
+            return redirect()->to(route('stripe.confirm', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
         }
 
-        return redirect()->to(route('pay.confirmation', ["status"=>"failed"]))->withError('Unable to process payment, Please contact support.');
+        return redirect()->to(route('stripe.confirm', ["status"=>"failed"]))->withError('Unable to process payment, Please contact support.');
 
     }
 
