@@ -87,7 +87,7 @@ class PaymentController extends Controller
 
     public function confirm(Request $request){
 
-        if(! $request->get("status") != "success" || $request->get("status") == "failed"){
+        if( $request->get("status") != "success" || $request->get("status") != "failed"){
             return redirect()->to(url("/"));
         }
 
