@@ -12,7 +12,7 @@
                 Route::get('/now', 'Stripe\App\Controllers\PaymentController@index')->name('stripe.pay');
                 Route::post('/intent', 'Stripe\App\Controllers\PaymentController@paymentIntent')->name('stripe.intent');
                 Route::get('/verify', 'Stripe\App\Controllers\PaymentController@verify')->name('stripe.verify');
-                Route::get('/confirm', 'Stripe\App\Controllers\PaymentController@confirm')->name('stripe.confirm');
+
             });
         });
     });

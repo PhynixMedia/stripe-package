@@ -37,10 +37,10 @@ class PaymentController extends Controller
         if($redirect_status == "succeeded"){
 
             session()->put(Stripe\App\StripeConstants::PAYMENT_STATUS, $redirect_status);
-            return redirect()->to(route('stripe.confirm', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
+            return redirect()->to(route('checkout.success', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
         }
 
-        return redirect()->to(route('stripe.confirm', ["status"=>"failed"]))->withError('Unable to process payment, Please contact support.');
+        return redirect()->to(route('checkout.cancel', ["status"=>"failed"]))->withError('Unable to process payment, Please contact support.');
 
     }
 
@@ -83,12 +83,6 @@ class PaymentController extends Controller
             return false;
         }
         return true;
-    }
-
-    public function confirm(Request $request){
-
-        $response = (object) $request->all();
-        return view("stripe-app::confirm", compact('response'));
     }
 
 }
