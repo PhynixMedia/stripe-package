@@ -7,3 +7,9 @@ php artisan vendor:publish
 or
 php artisan vendor:publish --publish=StripeServiceProvider
 ```` 
+```angular2html
+
+// GET Method
+route('stripe.confirm');
+
+```

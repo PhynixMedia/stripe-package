@@ -85,4 +85,10 @@ class PaymentController extends Controller
         return true;
     }
 
+    public function confirm(Request $request){
+
+        $response = $request->all();
+        return view("stripe-app::confirm", compact('response'));
+    }
+
 }
