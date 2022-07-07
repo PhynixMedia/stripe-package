@@ -87,7 +87,11 @@ class PaymentController extends Controller
 
     public function confirm(Request $request){
 
-        $response = $request->all();
+        if(! $request->get("status") != "success" || $request->get("status") == "failed"){
+            return redirect()->to(url("/"));
+        }
+
+        $response = (object) $request->all();
         return view("stripe-app::confirm", compact('response'));
     }
 

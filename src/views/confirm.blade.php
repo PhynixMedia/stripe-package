@@ -4,4 +4,6 @@
 
 {{--    {{ dd($response) }}--}}
 
+    {{ _value($response, "status") }}
+
 @endsection
