@@ -37,7 +37,7 @@ class PaymentController extends Controller
         if($redirect_status == "succeeded"){
 
             session()->put(Stripe\App\StripeConstants::PAYMENT_STATUS, $redirect_status);
-            return redirect()->to(route('checkout.success', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
+            return redirect()->to(route('checkout.fulfilment', ["status"=>"success"]))->withSuccess('Payment successfully processed.');
         }
 
         return redirect()->to(route('checkout.cancel', ["status"=>"failed"]))->withError('Unable to process payment, Please contact support.');
